@@ -1,15 +1,14 @@
-# -*- coding: utf-8 -*-
 import json
 import requests
 
-from checkio_sendgrid.exceptions import *
+from .exceptions import *
+from .settings import *
 
-DEFAULT_TIMEOUT = 10
-SENDGRID_USER_ADD_LIMIT = 1000
-__version__ = '0.0.1'
+__version__ = '1.0.0'
 
 
 class Request(object):
+
     def send(self, method, url, **kwargs):
         return requests.request(method, url, **kwargs)
 

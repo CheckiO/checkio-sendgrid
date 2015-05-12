@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 class SendgridError(StandardError):
     """ Base error. """
     def __init__(self, message, result=None):
@@ -19,7 +16,7 @@ class FormatNotAllowed(SendgridError):
 
 
 class ResourceNotFound(SendgridError):
-    """ Raised when a resource cannot be found e.g. a non-existant User. """
+    """ Raised when a resource cannot be found e.g. a non-existent User. """
     pass
 
 
