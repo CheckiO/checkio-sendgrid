@@ -6,4 +6,4 @@ Add to settings:
 - SENDGRID_PASSWORD = '';
 
 Add to code:
-- from src.server import Sendgrid;
+- from checkio_sendgrid.server import Sendgrid;
