@@ -4,7 +4,7 @@ import requests
 from .exceptions import *
 from .settings import *
 
-__version__ = '1.0.0'
+__version__ = '1.0'
 
 
 class Request(object):
@@ -93,8 +93,8 @@ class Sendgrid(object):
         url = '%snewsletter/lists/email/add.%s' % (self.api_url_main, self.format)
 
         inserted = 0
-        for i in xrange(0, len(users_data), SENDGRID_USER_ADD_LIMIT):
-            users = users_data[i:i+SENDGRID_USER_ADD_LIMIT]
+        for i in xrange(0, len(users_data), USER_ADD_LIMIT):
+            users = users_data[i:i+USER_ADD_LIMIT]
             data = {
                 'list': list_name,
                 'data': map(json.dumps, users)
